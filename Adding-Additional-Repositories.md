@@ -1,0 +1,15 @@
+---
+tags:
+  - quick-note
+  - linux
+---
+- Developers can submit their software to `apt` repos, get approved and released. The approved apt softwares can be found in `/etc/apt`
+- `apt` command is a part of package management software also called as `apt`. 
+- it contains  a whole lot of tools which allows us to source our software, download, update and remove softwares using [[apt-update]]
+- We can also add additional repos using `add-apt-repository` command.
+- If we need to download softwares which are not in apt repo, we need to do the following steps
+	- Download the GPG key of that specific software
+	- Add them to apt-key trust list
+	- Create a filename inside `etc/apt/source.list.d`. This is used to identify the package name which we will used during installation
+	- Update the repo using `apt-upgrade`
+	- Then install using `apt install <filename>`
